@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.menuBackground {
+    position: absolute;
+    width: 1920px;
+    height: 66px;
+
+    background: #26A02B;
+    border-radius: 3.09511px;
+
+    z-index: -1;
+}
+
+.mh {
+    margin: 0 275px 0 275px;
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 1;
+}
+
+.homepage {
+    margin-top: 19px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+
+    color: #FFFFFF;
+}
+
+.popular {
+    margin-top: 19px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+
+    color: #FFFFFF;
+}
+
+.home0 {
+    margin-top: 19px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+
+    color: #FFFFFF;
+}
+
+.home1 {
+    margin-top: 19px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+
+    color: #FFFFFF;
+}
+
+.home2 {
+    margin-top: 19px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+
+    color: #FFFFFF;
+}
+
+.home3 {
+    margin-top: 19px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+
+    color: #FFFFFF;
+}
+
+.photo {
+    position: absolute;
+    width: 342px;
+    height: 443px;
+
+    border-radius: 20px;
+}
+
+.description {
+    position: absolute;
+    width: 780px;
+    height: 443px;
+
+    background: #26A02B;
+    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #FFFFFF;
+}
+
