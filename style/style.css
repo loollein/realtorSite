@@ -88,16 +88,21 @@
 }
 
 .photo {
-    position: absolute;
-    width: 342px;
-    height: 443px;
+    margin-top: 55px;
 
+    width: 310px;
+    height: 448px;
+
+    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
 }
 
 .description {
+    margin-top: 55px;
+    padding: 19px;
+
     position: absolute;
-    width: 780px;
+    width: 794px;
     height: 443px;
 
     background: #26A02B;
@@ -108,7 +113,91 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 39px;
+    white-space: break-spaces;
 
     color: #FFFFFF;
 }
 
+.utility {
+    display: flex;
+    justify-content: center;
+}
+
+.expanded {
+    display: flex;
+    justify-content: space-around;
+}
+
+.utilitySeller {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #FFFFFF;
+}
+
+.utilityShop {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    text-align: right;
+
+    color: #FFFFFF;
+}
+
+.backgroundBlock {
+    margin-top: 30px;
+    padding-top: 13px;
+
+    width: 960px;
+    height: 329px;
+
+    background: #26A02B;
+    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.iconPush {
+    position: absolute;
+
+    margin-left: 127px;
+    padding-top: 2px;
+
+    width: 100px;
+    height: 26px;
+
+    background: #FF0000;
+    box-shadow: 0 4px 5px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.titleBlock {
+    margin-left: 505px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+
+    color: #FFFFFF;
+
+    text-shadow: 0 7px 4px rgba(0, 0, 0, 0.25);
+}
+
+.imgHouse {
+    margin-top: 5px;
+    margin-left: 10px;
+
+    width: 307px;
+    height: 254px;
+
+    filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+}
