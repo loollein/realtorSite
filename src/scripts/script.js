@@ -1,12 +1,11 @@
 import {models} from './model.js'
 import {functions} from './functions.js'
-import '../style/style.css'
 
-const $navigation = document.querySelector('#navigation')
+const $bm = document.querySelector('#selectBlock')
 
 models.forEach(block => {
     const html = functions[block.type]
     if (html) {
-        $navigation.insertAdjacentHTML('beforeend', html(block))
+        $bm.insertAdjacentHTML('beforeend', html(block))
     }
 })

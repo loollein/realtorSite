@@ -559,40 +559,41 @@ function hmrAccept(bundle, id) {
 },{}],"3LleC":[function(require,module,exports) {
 var _modelJs = require("./model.js");
 var _functionsJs = require("./functions.js");
-var _styleCss = require("../style/style.css");
-const $navigation = document.querySelector("#navigation");
+const $bm = document.querySelector("#selectBlock");
 (0, _modelJs.models).forEach((block)=>{
     const html = (0, _functionsJs.functions)[block.type];
-    if (html) $navigation.insertAdjacentHTML("beforeend", html(block));
+    if (html) $bm.insertAdjacentHTML("beforeend", html(block));
 });
 
-},{"./model.js":"itPMq","./functions.js":"kfKzI","../style/style.css":"44cui"}],"itPMq":[function(require,module,exports) {
+},{"./model.js":"itPMq","./functions.js":"kfKzI"}],"itPMq":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "models", ()=>models);
+var _houseBigWebp = require("../img/houseBig.webp");
+var _houseBigWebpDefault = parcelHelpers.interopDefault(_houseBigWebp);
 const models = [
     {
-        type: "nav",
-        value: [
-            "Главная",
-            "Студия",
-            "Загородная недвижимость",
-            "Однокомнатная",
-            "Двухкомнатная",
-            "Трехкомнатная"
-        ]
-    },
-    {
-        type: "description",
-        value: "Добрый день. Меня зовут Воронина Татьяна Юрьевна. Я - специалист по недвижимости в г. Барнауле, работаю в \xabБарнаульском Центре Недвижимости\xbb. Профессионально делаю подход к каждому клиенту, все сделки под ключ довожу до результата."
-    },
-    {
         type: "blockMenu",
-        value: "Загородная недвижимость"
+        value: {
+            house: [
+                "Загородная недвижимость",
+                "Студия",
+                "Однокомнатная",
+                "Двухкомнатная",
+                "Трехкомнатная"
+            ],
+            image: [
+                (0, _houseBigWebpDefault.default)
+            ]
+        }
+    },
+    {
+        type: "popular",
+        value: "Популярно"
     }
 ];
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../img/houseBig.webp":"eRFVs"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -622,20 +623,75 @@ exports.export = function(dest, destName, get) {
     });
 };
 
+},{}],"eRFVs":[function(require,module,exports) {
+module.exports = require("9fb02952e92c4678").getBundleURL("9HKMd") + "houseBig.d81fdc32.webp" + "?" + Date.now();
+
+},{"9fb02952e92c4678":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
 },{}],"kfKzI":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "functions", ()=>functions);
 var _utilsJs = require("./utils.js");
 const functions = {
-    nav
+    blockMenu
 };
-function nav(block) {
-    return block.value.map((item)=>``);
+function blockMenu(block) {
+    const imageHtml = block.value.image.map((item)=>`<img src="${item}" alt="house" class="imgHouse">`);
+    const blockHtml = block.value.house.map((item)=>(0, _utilsJs.bg)(`<div class="iconPush">Популярно</div>
+        <div class="titleBlock">${item}</div>
+        <div class="imgHouse">${imageHtml.join("")}</div>`));
+    return (0, _utilsJs.row)((0, _utilsJs.col)(blockHtml.join("")));
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./utils.js":"bVlgj"}],"bVlgj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "row", ()=>row);
+parcelHelpers.export(exports, "col", ()=>col);
+parcelHelpers.export(exports, "bg", ()=>bg);
+function row(content) {
+    return `<div class="row">${content}</div>`;
+}
+function col(content) {
+    return `<div class="col-md-10 offset-md-2">${content}</div>`;
+}
+function bg(content) {
+    return `<div class="backgroundBlock">${content}</div>`;
+}
 
-},{}],"44cui":[function() {},{}]},["jVB9o","3LleC"], "3LleC", "parcelRequire2d99")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["jVB9o","3LleC"], "3LleC", "parcelRequire2d99")
 
 //# sourceMappingURL=index.e668ad24.js.map
