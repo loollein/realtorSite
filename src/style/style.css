@@ -9,22 +9,17 @@
 }
 
 .menuBackground {
-    position: absolute;
-    width: 1920px;
-    height: 66px;
+    width: auto;
+    height: 7vh;
 
     background: #26A02B;
-    border-radius: 3.09511px;
-
-    z-index: -1;
 }
 
 .mh {
-    margin: 0 275px 0 275px;
+    margin: 0 5vw;
     display: flex;
     justify-content: space-between;
 
-    z-index: 1;
 }
 
 .homepage {
@@ -32,57 +27,7 @@
 
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-
-    color: #FFFFFF;
-}
-
-.popular {
-    margin-top: 19px;
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-
-    color: #FFFFFF;
-}
-
-.home0 {
-    margin-top: 19px;
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-
-    color: #FFFFFF;
-}
-
-.home1 {
-    margin-top: 19px;
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-
-    color: #FFFFFF;
-}
-
-.home2 {
-    margin-top: 19px;
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-
-    color: #FFFFFF;
-}
-
-.home3 {
-    margin-top: 19px;
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
+    font-size: 2vh;
 
     color: #FFFFFF;
 }
@@ -90,11 +35,11 @@
 .photo {
     margin-top: 55px;
 
-    width: 310px;
-    height: 448px;
+    width: auto;
+    height: 44vh;
 
-    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    box-shadow: 0 0.7vh 0.4vh rgba(0, 0, 0, 0.25);
+    border-radius: 1vw;
 }
 
 .description {
@@ -102,12 +47,12 @@
     padding: 30px;
 
     position: absolute;
-    width: 794px;
-    height: 443px;
+    width: 43vw;
+    height: 44vh;
 
     background: #26A02B;
-    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    box-shadow: 0 0.7vh 0.4vh rgba(0, 0, 0, 0.25);
+    border-radius: 1vw;
 
     font-style: normal;
     font-weight: 400;

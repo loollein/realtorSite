@@ -137,7 +137,7 @@
         return mainExports;
       });
 
-      // <script>
+      // <scripts>
     } else if (globalName) {
       this[globalName] = mainExports;
     }
