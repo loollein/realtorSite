@@ -137,9 +137,9 @@
 }
 
 .imgHouse {
-    position: absolute;
     margin-top: 5px;
-    margin-left: 10px;
+    margin-left: 20px;
+    margin-bottom: 100px;
 
     width: 307px;
     height: 254px;
